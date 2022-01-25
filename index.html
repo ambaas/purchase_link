@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link-pedidos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="py-5 text-center">
+        <div>
+           <button class="bg-black text-white rounded-xl font-black text-2xl">SYSTEMS <br> VINICIUS</button>
+           <P class="font-serif text-sm">Avenida presidente vargas <br> são paulo / nº 1250</P>
+           <div class="flex justify-between">
+            <p class="font-serif text-sm ml-36 text-green-400">Aberto</p>   
+            <img onclick="pon()" class="w-5 mr-5" src="img/icons8-menu-2-24.png" alt="">
+           </div>
+           <div class="opc ml-48 mr-2 text-xs mt-1">
+              <p class="bg-gray-200 py-1 font-serif">Inicio</p>
+              <p class="bg-gray-200 py-1 font-serif">Cupom desconto</p>
+              <p class="bg-gray-200 py-1 font-serif">Promoçoes ativas</p>
+              <p onclick="enc()" class="bg-gray-200 py-3 text-red-500 font-black"> X </p>
+           </div>
+           <p>__________________________________________</p>
+        </div>
+    </header>
+
+    <div id="tela-principal" class="text-xl">
+    
+      <div>
+       <div class="text-center">
+           <p class="text-sm font-bold font-sans">Das 8:00 as 21:00</p>
+       </div>
+       <div class="flex justify-center mt-1">
+          <input class="w-72 rounded-full border border-gray-200 text-center text-sm py-1" type="text">
+       </div>
+
+        <div class="mt-2 bg-gray-100 hover:bg-gray-300 flex justify-between">
+           <button onclick="acao()" class="ml-10 py-3 font-serif">Bebidas</button>
+            <img onclick="acao()" class="w-6 mr-10" src="img/seta-baixa.svg" alt="">
+        </div>
+        <div class="modal py-1 px-5">
+            <div class="flex justify-between mt-1">
+                <p onclick="abr()" class="text-sm">Sucos</p>
+                <img onclick="abr()" class="w-4" src="img/seta-baixa.svg" alt="">
+            </div> 
+            <div class="cai py-1 text-xs">
+                <div class="flex justify-between">
+                    <p class="mt-2">Maracujá</p>
+                    <p class="mt-2">_________________________________ R$ 5,00</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="mt-1">Goiaba</p>
+                    <p class="mt-1">___________________________________ R$ 5,00</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="mt-1">Manga</p>
+                    <p class="mt-1">____________________________________ R$ 7,00</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="mt-1">Laranja</p>
+                    <p class="mt-1">___________________________________ R$ 8,00</p>
+                </div>
+                <button class="ml-56 mt-16 underline" onclick="fech()">Voltar</button>
+            </div>
+            <div class="flex justify-between mt-2">
+                <p onclick="apa()" class="text-sm">Refrigerantes</p>
+                <img onclick="apa()" class="w-4" src="img/seta-baixa.svg" alt="">
+            </div>
+            <div class="cax py-1 text-xs">
+                <div class="flex justify-between">
+                    <p class="mt-2">Coca-cola 600ml</p>
+                    <p class="mt-2">_________________________ R$ 7,00</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="mt-1">Fanta 2l</p>
+                    <p class="mt-1">_________________________________ R$ 9,00</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="mt-1">Guaraná 2l</p>
+                    <p class="mt-1">_____________________________ R$ 8,00</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="mt-1">Pepsi 2l</p>
+                    <p class="mt-1">_________________________________ R$ 8,00</p>
+                </div>
+                <button class="ml-56 mt-16 underline" onclick="feh()">Voltar</button>
+            </div>
+            <div class="flex justify-between mt-2">
+                <p onclick="apar()" class="text-sm">Água</p>
+                <img onclick="apar()" class="w-4" src="img/seta-baixa.svg" alt="">
+            </div>
+            <div class="caxh py-1 text-xs">
+                <div class="flex justify-between">
+                    <p class="mt-1">Sem gás</p>
+                    <p class="mt-1">_________________________________ R$ 5,00</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="mt-1">Com gás</p>
+                    <p class="mt-1">________________________________ R$ 7,00</p>
+                </div>
+                <button class="ml-56 mt-16 underline" onclick="fehc()">Voltar</button>
+            </div>
+            <button class="ml-60 underline mt-16 text-xs" onclick="fechar()">Voltar</button>
+        </div>
+        <div class="mt-1 bg-gray-100 hover:bg-gray-300 flex justify-between">
+            <button onclick="entre()" class="ml-10 py-3 font-serif">Pizza</button>
+            <img onclick="entre()" class="w-6 mr-10" src="img/seta-baixa.svg" alt="">
+        </div>
+        <div class="mold py-1 px-5 text-sm">
+            <div class="flex justify-between">
+               <p class="mt-2">Calabresa</p>
+               <p class="mt-2">_______________________ R$ 30,00</p>
+            </div>
+            <div class="flex justify-between">
+                <p class="mt-1">4 queijos</p>
+                <p class="mt-1">_______________________ R$ 30,00</p>
+            </div>
+            <div class="flex justify-between">
+                <p class="mt-1">Portuguesa</p>
+                <p class="mt-1">_____________________ R$ 30,00</p>
+            </div>
+            <div class="flex justify-between">
+                <p class="mt-1">Tradicional</p>
+                <p class="mt-1">_____________________ R$ 30,00</p>
+            </div>
+            <div class="flex justify-between">
+                <p class="mt-1">Frango + Catupiry</p>
+                <p class="mt-1">_______________ R$ 30,00</p>
+            </div>
+            <button class="ml-56 mt-16 underline" onclick="sumir()">Voltar</button>
+        </div>
+        <div class="mt-1 bg-gray-100 hover:bg-gray-300 flex justify-between">
+            <button onclick="fund()" class="ml-10 py-3 font-serif">Aperitivos</button>
+            <img onclick="fund()" class="w-6 mr-10" src="img/seta-baixa.svg" alt="">
+        </div>
+        <div class="mod py-1 px-5">
+            <p>Batata frita</p>
+            <p>calabresa + bacon</p>
+            <p>tábua de frios</p>
+            <p>salgadinhos</p>
+            <button class="ml-56 mt-16" onclick="sub()">Voltar</button>
+        </div>
+        <div class="mt-1 bg-gray-100 hover:bg-gray-300 flex justify-between">
+            <button onclick="conf()" class="ml-10 py-3 font-serif">Hamburg</button>
+            <img onclick="conf()" class="w-6 mr-10" src="img/seta-baixa.svg" alt="">
+        </div>
+        <div class="modall py-1 px-5">
+            <p>tradicional</p>
+            <p>owc</p>
+            <p>x-burg</p>
+            <p>king</p>
+            <p>x-salada</p>
+            <button class="ml-56 mt-16" onclick="fec()">Voltar</button>  
+        </div>
+       
+     </div>
+    
+    </div>
+   
+          <script src="script.js"></script>
+</body>
+</html>
