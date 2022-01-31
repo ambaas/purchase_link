@@ -88,3 +88,62 @@ function enc() {
 
     opc.style.display = 'none'
 }
+
+var dados = []
+
+var tela=1
+var selecionado=null
+
+function mudartela(i, id=null){
+    id!==null?selecionado=id:''
+    tela=i
+    listar ()
+}
+
+function listar () { 
+    if (tela==1){ 
+        document.querySelector('#tela-principal').style.display=''
+        document.querySelector('#tela-carrinho').style.display='none'
+        document.querySelector('#tela-carteira').style.display='none'
+        document.querySelector('#tela-login').style.display='none'
+        document.querySelector('#tela-cupom').style.display='none'
+    }
+    if (tela==2){ 
+        document.querySelector('#tela-principal').style.display='none'
+        document.querySelector('#tela-carrinho').style.display=''
+        document.querySelector('#tela-carteira').style.display='none'
+        document.querySelector('#tela-login').style.display='none'
+        document.querySelector('#tela-cupom').style.display='none'
+    }
+    if (tela==3){ 
+        document.querySelector('#tela-principal').style.display=''
+        document.querySelector('#tela-carrinho').style.display='none'
+        document.querySelector('#tela-carteira').style.display='none'
+        document.querySelector('#tela-login').style.display='none'
+        document.querySelector('#tela-cupom').style.display='none'
+    }
+    if (tela==4){ 
+        document.querySelector('#tela-principal').style.display='none'
+        document.querySelector('#tela-carrinho').style.display='none'
+        document.querySelector('#tela-carteira').style.display='none'
+        document.querySelector('#tela-login').style.display=''
+        document.querySelector('#tela-cupom').style.display='none'
+    }
+    if (tela==5){ 
+        document.querySelector('#tela-principal').style.display='none'
+        document.querySelector('#tela-carrinho').style.display='none'
+        document.querySelector('#tela-carteira').style.display='none'
+        document.querySelector('#tela-login').style.display='none'
+        document.querySelector('#tela-cupom').style.display=''
+    }
+    if (tela==6){ 
+        document.querySelector('#tela-principal').style.display='none'
+        document.querySelector('#tela-carrinho').style.display='none'
+        document.querySelector('#tela-carteira').style.display=''
+        document.querySelector('#tela-login').style.display='none'
+        document.querySelector('#tela-cupom').style.display='none'
+    }
+    document.querySelector('tbody').innerHTML=''
+    var content = ''
+}
+listar()
